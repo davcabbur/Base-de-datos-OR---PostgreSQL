@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ClienteDAOImpl {
 
-    // 1. GUARDAR CLIENTE (INSERT)
+    // 1. GUARDAR CLIENTE
     public void guardar(Cliente c) throws SQLException {
         String sql = "INSERT INTO clientes (dni, nombre, email, telefono, direccion) " +
                 "VALUES (?, ?, ?, ?, ROW(?::tipo_via, ?, ?, ?)::direccion)";

@@ -9,7 +9,7 @@ public class Alquiler {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
 
-    // Constructor completo (para cuando leemos de la BD con ID)
+    // Constructor completo
     public Alquiler(long id, String dniCliente, String matricula, LocalDate fechaInicio, LocalDate fechaFin) {
         this.id = id;
         this.dniCliente = dniCliente;
@@ -18,7 +18,7 @@ public class Alquiler {
         this.fechaFin = fechaFin;
     }
 
-    // Constructor sin ID (para insertar nuevos, la BD genera el ID)
+    // Constructor sin ID
     public Alquiler(String dniCliente, String matricula, LocalDate fechaInicio, LocalDate fechaFin) {
         this.dniCliente = dniCliente;
         this.matricula = matricula;

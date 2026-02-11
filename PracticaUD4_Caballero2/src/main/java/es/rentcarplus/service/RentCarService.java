@@ -26,14 +26,14 @@ public class RentCarService {
 
             // 4. Si todo salió bien, guardamos los cambios definitivamente
             conn.commit();
-            System.out.println("✅ Transacción completada: Alquiler creado y coche bloqueado.");
+            System.out.println("Transacción completada: Alquiler creado y coche bloqueado.");
 
         } catch (Exception e) {
-            // 5. Si algo falló, deshacemos TODO (Rollback)
+            // 5. Si algo falló, deshacemos TODO
             try {
                 if (conn != null)
                     conn.rollback();
-                System.err.println("❌ Error en la transacción. Se han deshecho los cambios.");
+                System.err.println("Error en la transacción. Se han deshecho los cambios.");
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }

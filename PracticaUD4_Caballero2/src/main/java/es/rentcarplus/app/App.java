@@ -12,7 +12,8 @@ public class App {
 		try {
 			// 1. ALTA DE CLIENTE
 			Direccion dir = new Direccion(TipoVia.avenida, "Cortes Valencianas", 50, "46015");
-			Cliente c = new Cliente("23886049C", "David CaPracticaUD4_Caballero (1)ballero", "david@david.com", "675823441", dir);
+			Cliente c = new Cliente("23886049C", "David Caballero", "david@david.com",
+					"675823441", dir);
 
 			try {
 				new ClienteDAOImpl().guardar(c);
@@ -31,7 +32,7 @@ public class App {
 				System.out.println("El vehículo ya existe.");
 			}
 
-			// 3. ALQUILER CON TRANSACCIÓN (Datos fijos del PDF)
+			// 3. ALQUILER CON TRANSACCIÓN
 			Alquiler alq = new Alquiler(
 					"34567890C",
 					"7788YZA",
@@ -46,7 +47,7 @@ public class App {
 				System.out.println(veh);
 			}
 
-			// 5. HISTÓRICO DE ALQUILERES (Cliente 34567890C)
+			// 5. HISTÓRICO DE ALQUILERES
 			System.out.println("\n--- Historial Cliente 34567890C ---");
 			List<Alquiler> historial = new AlquilerDAOImpl().historialPorCliente("34567890C");
 			for (Alquiler a : historial) {

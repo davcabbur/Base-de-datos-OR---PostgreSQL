@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class ConexionDB {
 
-    // Instancia única (Singleton)
+    // Instancia única
     private static ConexionDB instance;
     private Connection connection;
 
@@ -40,7 +40,7 @@ public class ConexionDB {
         }
     }
 
-    // Método de acceso global (Singleton)
+    // Método de acceso global
     public static ConexionDB getInstance() {
         try {
             if (instance == null || instance.getConnection().isClosed()) {
